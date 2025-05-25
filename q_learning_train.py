@@ -1,5 +1,5 @@
 import numpy as np
-from terrain_nav_env import TerrainNavEnv
+from realistic_terrain_nav import TerrainNavEnv
 
 # Hyperparameters
 episodes = 50000
@@ -46,8 +46,8 @@ for ep in range(episodes):
     # Render every 50 episodes
     if ep % 50 == 0:
         print(f"Episode {ep} complete. Epsilon: {epsilon:.3f}")
-        #env.render()
-        env.render_q_path()
+        env.render()
+        #env.render_q_path()
 
 env.close()
 print("Training complete!")
